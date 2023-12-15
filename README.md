@@ -7,7 +7,7 @@ This repository is the official implementation of [DDCoT](https://arxiv.org/abs/
 [Ge Zheng∗]() , [Bin Yang∗](), [Jiajin Tang*](https://toneyaya.github.io/), [Hong-Yu Zhou](https://zhouhy.org/), [Sibei Yang†](https://faculty.sist.shanghaitech.edu.cn/yangsibei/)
 
 *Equal contribution; †Corresponding Author
-![image](https://github.com/YangBin55/DDCOT/blob/main/images/teaser.png)
+![image](https://github.com/YangBin55/DDCOT/blob/master/images/teaser.png)
 
 ## Requirements
 
