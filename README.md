@@ -26,6 +26,7 @@ https://github.com/lupantech/ScienceQA/tree/main/data
 ```
 
 ## Instructions
+Our trained model, extracted visual features and captions and generated rationales are available at [Google Drive](https://drive.google.com/drive/folders/1BeipodkLa7rH5QIodF3B_Xda1MCZrq9Y?usp=drive_link)
 
 ### Generate Rationale
 To generate rationale for one sample，you can run the following code.
@@ -34,8 +35,6 @@ python rationale_generation.py
 ```
 
 ### Train
-
-Model weights, generated rationales and extracted vision features will be released soon.
 
 ```
 python main.py \
