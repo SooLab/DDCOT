@@ -24,11 +24,8 @@ img_shape = {
 def load_data_std(args):
     problems = json.load(open(os.path.join(args.data_root, 'scienceqa/problems.json')))
     
-    if args.weak:
-        pid_splits = json.load(open(os.path.join(args.data_root, 'scienceqa/pid_split_with_img.json')))
-    else:
-        pid_splits = json.load(open(os.path.join(args.data_root, 'scienceqa/pid_splits.json')))
     
+    pid_splits = json.load(open(os.path.join(args.data_root, 'scienceqa/pid_splits.json')))
     
     
     captions = json.load(open(args.caption_file))["captions"]
@@ -50,10 +47,7 @@ def load_data_img(args):
     problems = json.load(open(os.path.join(args.data_root, 'scienceqa/problems.json')))
     
     
-    if args.weak:
-        pid_splits = json.load(open(os.path.join(args.data_root, 'scienceqa/pid_split_with_img.json')))
-    else:
-        pid_splits = json.load(open(os.path.join(args.data_root, 'scienceqa/pid_splits.json')))
+    pid_splits = json.load(open(os.path.join(args.data_root, 'scienceqa/pid_splits.json')))
     
     # captions = json.load(open(args.caption_file))["captions"]
     captions_train = json.load(open("data/scienceqa/new_caption_train.json"))
@@ -102,8 +96,8 @@ class ScienceQADatasetStd(Dataset):
         self.target_text = []
         self.source_text = []
         
-        R_from_gpt = json.load(open("data/scienceqa/output_gpt_train_no_anwser.json"))
-        R_from_gpt_test = json.load(open("data/scienceqa/output_gpt_test_no_anwser.json"))
+        R_from_gpt = json.load(open("new_rationale_train.json"))
+        R_from_gpt_test = json.load(open("new_rationale_test.json"))
         
         if test_le is not None:
             test_le_data =json.load(open(test_le))["preds"]
@@ -242,8 +236,8 @@ class ScienceQADatasetImg(Dataset):
         
         
         
-        new_R_train = json.load(open("data/scienceqa/reform_Rv2_train_noR.json"))
-        new_R_test = json.load(open("new_R.json"))
+        new_R_train = json.load(open("new_rationale_train.json"))
+        new_R_test = json.load(open("new_rationale_test.json"))
 
         if test_le is not None:
             test_le_data =json.load(open(test_le))["preds"]
